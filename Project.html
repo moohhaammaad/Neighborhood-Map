@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Egypt Map</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> 
+  </head>
+
+  <body>
+    <div class="container">
+    <div class="options-box">
+      <input id="search-text" type="text" placeholder="area search"  data-bind="textInput: search">
+      <div>
+        <ul data-bind="foreach: location">
+        <!-- borrow this $data.value from knock out documentation -->
+          <li>
+            <a href="#" data-bind="text: $data.title, click: $parent.markerTrigger"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+        <div id="map"></div>
+  </div>
+
+   
+    <script src="js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="js/knockout.min.js"></script> 
+    <script src="js/project.js"></script> 
+
+    
+    <!-- load the google maps API asynchronously -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp9LpW7Q8bWizH8JycnOLZ8_z6dX_ikt4&libraries=geometry,places&v=3&callback=initMap" onerror="mapError()">
+    </script>  
+  </body>
+</html>

@@ -1,0 +1,73 @@
+html,
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+input {
+    font-size: 20px;
+}
+
+#map {
+    bottom: 0px;
+    height: 100%;
+    left: 362px;
+    position: absolute;
+    right: 0px;
+}
+
+.options-box {
+    background: #28ADB6;
+    border: 1px solid #999;
+    border-radius: 3px;
+    height: 100%;
+    line-height: 35px;
+    padding: 10px 10px 30px 10px;
+    text-align: left;
+    width: 340px;
+    overflow: scroll;
+}
+
+.text {
+    font-size: 12px;
+}
+
+#search-text {
+    position: relative;
+    width: 85%;
+    height: 25px;
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 800px) {
+    .options-box {
+        width: 30%;
+    }
+    #map {
+        left: 250px;
+    }
+}
+
+@media only screen and (min-device-width: 450px) and (max-device-width: 599px) {
+    .options-box {
+        width: 60%;
+    }
+    #map {
+        left: 250px;
+    }
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 449px) {
+    .options-box {
+        width: 50%;
+    }
+    #map {
+        left: 230px;
+    }
+}
